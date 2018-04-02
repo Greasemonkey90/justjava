@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/coffee_stock2"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context="com.example.brittanyshannon.justjava.MainActivity">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nameBox"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:inputType="textCapWords"/>
+        <TextView
+            android:text="@string/toppings"
+            style="@style/header"
+            android:paddingTop="16dp"
+           />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/wcBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:textColor="#FFFFFF"
+            android:text="@string/option1"
+            android:buttonTint="#00E5FF"/>
+        <CheckBox
+            android:id="@+id/chocBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#00E5FF"
+            android:text="@string/option2" />
+
+        </LinearLayout>
+        <TextView
+            style="@style/header"
+            android:paddingTop="16dp"
+            android:text="@string/qText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/buttons"
+                android:onClick="decrement"
+                android:text="@string/down"
+                 />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chewy"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp"
+                android:text="@string/quantity"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                style="@style/buttons"
+                android:text="@string/up"
+                android:onClick="increment"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/header"
+            android:layout_marginTop="16dp"
+            android:text="@string/summary" />
+
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/chewy"
+            android:text="@string/price"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#2196F3"
+            android:fontFamily="@font/butcherman"
+            android:onClick="submitOrder"
+            android:text="@string/orderButton" />
+        <TextView
+            android:id="@+id/toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+    </LinearLayout>
+</ScrollView>
